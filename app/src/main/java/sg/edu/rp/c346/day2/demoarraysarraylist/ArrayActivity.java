@@ -13,12 +13,22 @@ public class ArrayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_array);
+        this.setTitle("Array");
+
+        String[] fruits = new String[3];
+        fruits[0] = "apple";
+        fruits[1] = "banana";
+        fruits[2] = "cherry";
 
         tv = findViewById(R.id.textView1);
 
-        //continue view the code in the worksheet
+        String text = "Fruits\n";
+        text += "=====\n";
 
+        for(int i=0; i < fruits.length; i++) {
+            text += fruits[i] + "\n";
+        }
 
-
+        tv.setText(text);
     }
 }
